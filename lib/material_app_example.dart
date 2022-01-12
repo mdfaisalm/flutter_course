@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  const message = 'Allah-Ho-Akbar';
+  const message = 'Allah-Hoooo-Akbar';
   runApp(
     MaterialApp(
       home: Center(
