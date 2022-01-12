@@ -30,5 +30,14 @@ Create icons with appicon.co
 Copy assets to android and ios folders for app icon
 create image asset from app icon to adjust padding of app icon
 
-4/
+6/40
+Hot Reload (instant run on saving, same state of all views except changed lines)
+Stateless Wisget (Required for Hot Reload)
+Hot Restart (instant run but reset all views state)
 
+6/41
+Container (Can contain only one child, occupied full screen if no child, otherwise big as child)
+SafeArea Widget (To avoid buttons and notches)
+width, height of container
+Margins  (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
+Paddings (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
