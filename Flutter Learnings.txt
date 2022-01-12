@@ -1,0 +1,34 @@
+3/24
+Create New Project
+Blank App
+MaterialApp Widget
+Center Widget
+Text Widget
+
+3/26
+, for comments
+Scaffold Widget (complete base Widget for appbar, navigation, title, bottombar and etc...)
+Hide Debug Banner
+Appbar Widget
+Title
+BG Color (for Scaffold appbar)
+Colors
+BG Color (for Scaffold body)
+Body (of Scaffold)
+Image
+NetworkImage Widget
+Alt+Enter (for options and auto code of widget)
+
+3/27
+Create images folder as assets
+Copy assets to folders and Define in pubspec.yaml file
+Yaml file works with indentation (2 spaces)
+AssetImage Widget
+
+3/28
+Create icons with appicon.co
+Copy assets to android and ios folders for app icon
+create image asset from app icon to adjust padding of app icon
+
+4/
+
