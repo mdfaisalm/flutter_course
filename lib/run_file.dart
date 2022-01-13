@@ -9,10 +9,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        child: Text(
-          "Hello",
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.blue,
+        body: SafeArea(
+          child: Container(
+            height: 400,
+            width: 300,
+            color: Colors.deepOrange,
+            padding: EdgeInsets.all(40),
+            margin: EdgeInsets.fromLTRB(10, 20, 30, 40),
+            child: Text(
+              "Hello",
+            ),
+          ),
         ),
       ),
     );

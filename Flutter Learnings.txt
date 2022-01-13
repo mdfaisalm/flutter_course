@@ -36,7 +36,7 @@ Stateless Wisget (Required for Hot Reload)
 Hot Restart (instant run but reset all views state)
 
 6/41
-Container (Can contain only one child, occupied full screen if no child, otherwise big as child)
+Container (Can contain only one child, occupied full screen if no child, otherwise big as child| Container without Scaffold Widget holds fullscreen)
 SafeArea Widget (To avoid buttons and notches)
 width, height of container
 Margins  (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
