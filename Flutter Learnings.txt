@@ -41,3 +41,21 @@ SafeArea Widget (To avoid buttons and notches)
 width, height of container
 Margins  (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
 Paddings (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
+
+6/42
+Columns and Rows
+columns and rows contains list of Widget
+columns by default take full height (can be set wrap to children by mainAxisSize:min)
+columns by default wrap width
+verticalDirection of column (vertical direction of children)
+mainAxisAlignment of column (vertical layout_gravity of children)
+crossAxisAlignment of column (horizontal layout_gravity of children, stretch for fullscreen)
+
+rows by default take full width (can be set wrap to children by mainAxisSize:min)
+rows by default wrap height
+horizontalDirection of row (horizontal direction of children)
+mainAxisAlignment of row (horizontal layout_gravity of children)
+crossAxisAlignment of horizontal (vertical layout_gravity of children, stretch for fullscreen)
+
+double.infinity size (fullScreen,(test may be full of parent))
+SizedBox Widget (for empty spacing, just like a view in android)
