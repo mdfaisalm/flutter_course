@@ -59,3 +59,8 @@ crossAxisAlignment of horizontal (vertical layout_gravity of children, stretch f
 
 double.infinity size (fullScreen,(test may be full of parent))
 SizedBox Widget (for empty spacing, just like a view in android)
+
+6/44
+CircleAvatar
+TextStyle
+
