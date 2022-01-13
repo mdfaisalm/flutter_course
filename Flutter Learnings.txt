@@ -62,5 +62,7 @@ SizedBox Widget (for empty spacing, just like a view in android)
 
 6/44
 CircleAvatar
-TextStyle
+TextStyle (fontWeight, size, color, font family, letter spacing)
 
+6/45
+Fonts
