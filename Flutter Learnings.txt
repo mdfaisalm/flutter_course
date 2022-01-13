@@ -53,7 +53,7 @@ crossAxisAlignment of column (horizontal layout_gravity of children, stretch for
 
 rows by default take full width (can be set wrap to children by mainAxisSize:min)
 rows by default wrap height
-horizontalDirection of row (horizontal direction of children)
+verticalDirection of row (vertical direction of children)
 mainAxisAlignment of row (horizontal layout_gravity of children)
 crossAxisAlignment of horizontal (vertical layout_gravity of children, stretch for fullscreen)
 

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
             verticalDirection: VerticalDirection.up,
             children: [
               Container(
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                 height: 40,
-                width: 10,
+                width: 100,
                 color: Colors.black26,
                 child: Text(
                   "Hello 3",

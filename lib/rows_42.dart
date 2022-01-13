@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            verticalDirection: VerticalDirection.up,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
+            textDirection: TextDirection.rtl,
             children: [
               Container(
                 height: 100,
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                 height: 40,
-                width: 10,
+                width: 100,
                 color: Colors.black26,
                 child: Text(
                   "Hello 3",
