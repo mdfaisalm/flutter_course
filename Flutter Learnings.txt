@@ -73,5 +73,5 @@ Icon Widget
 6/47
 Card Widget
 Padding Class
-ListTile Widget
+ListTile Widget (problem while want to set padding to 0 of all sides, so use custom widget row with 2 containers, 1 for icon other for text)
 Divider Widget
