@@ -66,3 +66,11 @@ TextStyle (fontWeight, size, color, font family, letter spacing)
 
 6/45
 Custom Fonts
+
+6/46
+Icon Widget
+
+6/47
+Card
+Padding Class
+ListTiles
