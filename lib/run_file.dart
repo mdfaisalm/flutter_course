@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -58,6 +59,7 @@ class HomePage extends StatelessWidget {
               ),
               Card(
                 shadowColor: Colors.lightGreenAccent,
+                margin: EdgeInsets.all(10),
                 color: Colors.red,
                 elevation: 5,
                 child: ListTile(
@@ -73,6 +75,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Card(
+                margin: EdgeInsets.all(10),
                 child: ListTile(
                   textColor: Colors.teal,
                   iconColor: Colors.teal,
@@ -90,9 +93,10 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 color: Colors.red,
-                width: size.width / 2,
+                margin: EdgeInsets.all(10),
+                width: size.width / 1.5,
                 child: Padding(
-                  padding: const EdgeInsets.all(5.0),
+                  padding: const EdgeInsets.all(2.0),
                   child: Card(
                     child: ListTile(
                       textColor: Colors.teal,
