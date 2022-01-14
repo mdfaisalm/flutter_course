@@ -71,6 +71,7 @@ Custom Fonts
 Icon Widget
 
 6/47
-Card
+Card Widget
 Padding Class
-ListTiles
+ListTile Widget
+Divider Widget
