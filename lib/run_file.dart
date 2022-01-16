@@ -47,7 +47,7 @@ class _MyStateFullWidgetState extends State<MyStateFullWidget> {
             flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: FlatButton(
+              child: TextButton(
                   onPressed: () {
                     findAnswer(this);
                   },
