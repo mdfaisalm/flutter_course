@@ -37,7 +37,7 @@ Hot Restart (instant run but reset all views state)
 
 6/41
 Container (Can contain only one child, occupied full screen if no child, otherwise big as child| Container without Scaffold Widget holds fullscreen)
-SafeArea Widget (To avoid buttons and notches)
+SafeArea Widget (To avoid buttons and notches,adding bar adjust top notches automatically, so no need of safearea while using appbar)
 width, height of container
 Margins  (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
 Paddings (EdgeInsets (all,only,ltrb, symetric (same top,bottom and right,left)))
@@ -75,3 +75,26 @@ Card Widget
 Padding Class
 ListTile Widget (problem while want to set padding to 0 of all sides, so use custom widget row with 2 containers, 1 for icon other for text)
 Divider Widget
+
+7/51
+Expanded Widget (just like a weight property in linear layout)(must be a descendant of a Row, Column, or Flex, and the path from the Expanded widget to its enclosing Row, Column, or Flex must contain only StatelessWidgets or StatefulWidgets (not other kinds of widgets, like RenderObjectWidgets).
+only one child, flex property to set ratio, divides full with (for rows) by childs depending on ratio. default ratio is 1
+in row or column only those children which are enclosed with expanded
+
+7/52
+using intention actions like bulb icon on left on selected code-line and on flutter outline panel
+
+7/53
+FlatButton (onPressed)
+print (just like logcat)
+
+7/55
+Variables (String interpolation with $ eg. "abc&variable&d")
+
+7/57
+Dart is "statically typed language" means defining a variable can store only that type of data. Dynamically typed language
+Dart can be used as "Dynamically typed language" by defining dynamic data type, which can be assigned any value even at the time of defining.
+Dart variable var can also be used as dynamic data type by leaving un-defined at the time of definition.
+
+7/58
+Stateful (provide a method to redraw screen) vs Stateless Widget(can change state of screen)
