@@ -43,7 +43,6 @@ class _MyStateFullWidgetState extends State<MyStateFullWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
             flex: 2,

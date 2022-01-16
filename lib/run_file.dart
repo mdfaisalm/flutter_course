@@ -6,8 +6,7 @@ void main() {
   runApp(MyApp());
 }
 
-int rightDiceImage = 1;
-int leftDiceImage = 1;
+int currentBallPosition = 1;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.red,
-          title: Text("Diece"),
+          title: Text("Ask Me Anything"),
           centerTitle: true,
         ),
         body: Center(
@@ -43,36 +42,24 @@ class _MyStateFullWidgetState extends State<MyStateFullWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
             flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextButton(
+              child: FlatButton(
                   onPressed: () {
-                    rollBothDices(this);
+                    findAnswer(this);
                   },
-                  child: Image.asset("images/dice$leftDiceImage.png")),
-            )),
-        Expanded(
-            flex: 3,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextButton(
-                  onPressed: () {
-                    rollBothDices(this);
-                  },
-                  child: Image.asset("images/dice$rightDiceImage.png")),
+                  child: Image.asset("images/ball$currentBallPosition.png")),
             )),
       ],
     );
   }
 }
 
-rollBothDices(State state) {
+findAnswer(State state) {
   state.setState(() {
-    rightDiceImage = Random().nextInt(6) + 1;
-    leftDiceImage = Random().nextInt(6) + 1;
+    currentBallPosition = Random().nextInt(5) + 1;
   });
 }
