@@ -106,6 +106,9 @@ Random Number
 7/62
 Method Creation
 
+8/6
+8 ball magic app
+
 9/75
 import flutter packages/libraries
 

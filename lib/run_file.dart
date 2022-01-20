@@ -1,13 +1,8 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 void main() => runApp(MyApp());
-// void main() {
-//   runApp(MyApp());
-// }
-
-int currentBallPosition = 1;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -15,52 +10,47 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.red,
-          title: Text("Ask Me Anything"),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: MyStateFullWidget(),
-        ),
+        backgroundColor: Colors.black,
+        body: getBody(),
       ),
     );
   }
-}
 
-class MyStateFullWidget extends StatefulWidget {
-  const MyStateFullWidget({Key? key}) : super(key: key);
-
-  @override
-  _MyStateFullWidgetState createState() => _MyStateFullWidgetState();
-}
-
-class _MyStateFullWidgetState extends State<MyStateFullWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            flex: 2,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextButton(
-                  onPressed: () {
-                    findAnswer(this);
-                  },
-                  child: Image.asset("images/ball$currentBallPosition.png")),
-            )),
-      ],
+  SafeArea getBody() {
+    return SafeArea(
+      child: Column(
+        children: [
+          getSoundRow(Colors.blue, 1),
+          getSoundRow(Colors.red, 2),
+          getSoundRow(Colors.amber, 3),
+          getSoundRow(Colors.deepOrange, 4),
+          getSoundRow(Colors.teal, 5),
+          getSoundRow(Colors.grey, 6),
+          getSoundRow(Colors.deepPurpleAccent, 7),
+        ],
+      ),
     );
   }
-}
 
-findAnswer(State state) {
-  state.setState(() {
-    currentBallPosition = Random().nextInt(5) + 1;
-  });
+  getSoundRow(Color color, int soundPosition) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+        ),
+        child: Container(
+          color: color,
+        ),
+        onPressed: () {
+          makeSound(soundPosition);
+        },
+      ),
+    );
+  }
+
+  void makeSound(int soundPosition) {
+    final player = AudioCache();
+    player.play("assets_note$soundPosition.wav");
+  }
 }
