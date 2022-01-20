@@ -97,7 +97,7 @@ Dart can be used as "Dynamically typed language" by defining dynamic data type, 
 Dart variable var can also be used as dynamic data type by leaving un-defined at the time of definition.
 
 7/58
-Stateful (provide a method to redraw screen) vs Stateless Widget(can change state of screen)
+Stateful (provide a method to redraw screen) vs Stateless Widget(can't change state of screen)
 
 7/59
 Math Library
@@ -111,7 +111,23 @@ import flutter packages/libraries
 
 9/76
 play sounds
+SoundsApp
 
 9/83
-Arrow Functions
-SoundsApp
+Arrow Functions (arrow syntax => is used when there is only one line code in calling method
+,void main()=>runApp(MyApp()) is equivalent to below method
+void main() {
+ runApp(MyApp());
+ }
+ and
+ int add()=>5+2;
+ is equivalent to
+ int add(){
+ return 5+2;
+ }
+ and
+  int add(int a,int b)=>a+b;
+  is equivalent to
+  int add(int a,int b){
+  return a+b;
+  }
