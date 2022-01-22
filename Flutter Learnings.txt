@@ -137,3 +137,23 @@ void main() {
 
 10/88
 Lists
+
+10/102
+syntax sugar (assign default values in constructor without assignment operator in body)
+class Question{
+    String questionText;
+    bool questionAnswer;
+
+    Question (String a, bool b){
+        questionText=a;
+        questionAnswer=b;
+    }
+}
+
+is equal to
+class Question{
+    String questionText;
+    bool questionAnswer;
+
+    Question (this.questionText, this.questionAnswer);
+}

@@ -1,56 +1,88 @@
-import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_course/QuizBank.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+QuizBank quizBank = QuizBank();
+List<Icon> resultsIcons = [];
+
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
-        body: getBody(),
+        backgroundColor: Color(0xff333333),
+        body: getBody(this),
       ),
     );
   }
+}
 
-  SafeArea getBody() {
-    return SafeArea(
-      child: Column(
-        children: [
-          getSoundRow(Colors.blue, 1),
-          getSoundRow(Colors.red, 2),
-          getSoundRow(Colors.amber, 3),
-          getSoundRow(Colors.deepOrange, 4),
-          getSoundRow(Colors.teal, 5),
-          getSoundRow(Colors.grey, 6),
-          getSoundRow(Colors.deepPurpleAccent, 7),
-        ],
-      ),
-    );
-  }
-
-  getSoundRow(Color color, int soundPosition) {
-    return Expanded(
-      child: TextButton(
-        style: TextButton.styleFrom(
-          padding: EdgeInsets.zero,
+SafeArea getBody(State state) {
+  return SafeArea(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Expanded(
+          child: Center(
+            child: Text(
+              quizBank.getNextQuiz(resultsIcons).statement,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ),
         ),
-        child: Container(
-          color: color,
+        TextButton(
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.zero),
+                backgroundColor: MaterialStateProperty.all(Color(0xff66B764))),
+            onPressed: () {
+              state.setState(() {
+                createIcon();
+              });
+            },
+            child: Text("True", style: TextStyle(color: Colors.white))),
+        TextButton(
+          style: ButtonStyle(
+              padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.zero),
+              backgroundColor: MaterialStateProperty.all(Color(0xffEF5A46))),
+          onPressed: () {
+            state.setState(() {
+              createIcon();
+            });
+          },
+          child: Text(
+            "False",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-        onPressed: () {
-          makeSound(soundPosition);
-        },
-      ),
-    );
-  }
+        Row(
+          children: resultsIcons,
+        )
+      ],
+    ),
+  );
+}
 
-  void makeSound(int soundPosition) {
-    final player = AudioCache();
-    player.play("assets_note$soundPosition.wav");
+void createIcon() {
+  if (quizBank.checkAnswer(true)) {
+    resultsIcons.add(Icon(
+      Icons.check,
+      color: Colors.green,
+    ));
+  } else {
+    resultsIcons.add(Icon(
+      Icons.close,
+      color: Colors.red,
+    ));
   }
 }
