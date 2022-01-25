@@ -138,6 +138,10 @@ void main() {
 10/88
 Lists
 
+10/101
+Quizzer App
+Import Alert Dialog flutter package
+
 10/102
 syntax sugar (assign default values in constructor without assignment operator in body)
 class Question{
@@ -157,3 +161,8 @@ class Question{
 
     Question (this.questionText, this.questionAnswer);
 }
+
+11/105
+Destini - StoryTeller
+BoxDecoration for container background image with scale types
+Visibility widget for show/hide
