@@ -164,5 +164,5 @@ class Question{
 
 11/105
 Destini - StoryTeller
-BoxDecoration for container background image with scale types
+BoxDecoration and DecorationImage for container background image with scale types
 Visibility widget for show/hide
