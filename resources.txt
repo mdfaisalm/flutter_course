@@ -7,3 +7,6 @@ https://www.materialpalette.com/
 https://www.materialpalette.com/colors
 https://www.materialpalette.com/icons
 https://dartpad.dartlang.org/
+https://dribbble.com/
+https://docs.flutter.dev/cookbook
+https://www.youtube.com/watch?v=kn0EOS-ZiIc

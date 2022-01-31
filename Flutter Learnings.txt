@@ -166,3 +166,17 @@ class Question{
 Destini - StoryTeller
 BoxDecoration and DecorationImage for container background image with scale types
 Visibility widget for show/hide
+
+12/122
+ThemeData
+HexDecimal Colors
+CopyWith (to override specific part of theme)
+Theme Widget (Wrap Widgets with Theme Widget for deeper level individual customization)
+
+12/123
+Box Decoration (use color inside box decoration instead of color as major property of container,
+otherwise will crash due to ambiguous color property)
+DRY - Don't Repeat Yourself
+Extract Widget (Widget to a Class, Flutter Outline)
+Keys (https://www.youtube.com/watch?v=kn0EOS-ZiIc)
+@required (assign to required params of method)
