@@ -180,3 +180,51 @@ DRY - Don't Repeat Yourself
 Extract Widget (Widget to a Class, Flutter Outline)
 Keys (https://www.youtube.com/watch?v=kn0EOS-ZiIc)
 @required (assign to required params of method)
+
+12/124
+Immutable (can't change, final, const, stateless widget etc)
+final vs const (final can be assigned runtime values(after code compiled) as (final a=Date.now()), but const can't)
+
+12/125
+font_awesome_flutter package
+
+12/126
+GestureDetector Widget (best alternative for click listener instead of TextButton to avoid extra styling like margin n padding)
+
+12/127
+Enums (use enums instead of numbers or string when more than one options for a property, to avoid confusion with numbers after long time of code, meaningful code lines)
+//Without Enum
+void main(){
+MyCarColor myCarColor = MyCarColor();
+myCarColor.setCarColor(1);
+}
+class MyCarColor(){
+//1 for red, 2 for blue, 3 for brown
+int color;
+public setCarColor(int color){
+this.color=color;
+}
+}
+
+//Without Enum
+void main(){
+MyCarColor myCarColor = MyCarColor();
+myCarColor.setCarColor(RED);
+}
+class MyCarColor(){
+int color;
+public setCarColor(int color){
+this.color=color;
+}
+}
+
+enum CarColors{
+RED,
+BLUE,
+BROWN
+}
+
+12/128
+Ternary Operators
+expression?then:else
+age>14?young:child
