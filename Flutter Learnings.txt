@@ -228,3 +228,47 @@ BROWN
 Ternary Operators
 expression?then:else
 age>14?young:child
+
+12/129
+Functions as parameters
+void main(){
+int result= calculator(5,8,add or multiple);
+}
+
+int calculator(int a,int b, Function function){
+return function(a,b);
+}
+
+int add(int a,int b){
+return a+b;
+}
+
+int multiply(int a,int b){
+return a*b;
+}
+
+also we can name a Function as
+Function calculator=(int a,int b, Function){
+return calculator(a,b);
+}
+
+and another example
+void main(){
+Car myCar=Car(slowDrive);//setting Car function value as slowDrive at initialization
+myCar.drive();//calling slowDrive method
+myCar.drive=fastDrive;//changing value of drive function
+myCar.drive();//calling fastDrive Method
+}
+
+class Car{
+Function drive;
+Car ({this.drive});
+}
+
+void slowDrive(){
+print ("Slow");
+}
+
+void fastDrive(){
+print ("Fast");
+}
