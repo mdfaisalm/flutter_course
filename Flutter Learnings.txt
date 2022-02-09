@@ -272,3 +272,41 @@ print ("Slow");
 void fastDrive(){
 print ("Fast");
 }
+
+12/130
+constants file
+to us crossAxisAlignment.baseline, should set textBaseLine also
+toString() method
+toDouble() method
+Slider Widget
+
+12/131
+Embedding Slider Widget in SliderTheme Widget and data is SliderThemeData
+of(context) method on SliderTheme to get function of copyWith()
+SliderTheme as MaterialApp ThemeData child as default SliderTheme of whole App
+
+12/132
+creating Custom Widgets from scratch (for example by use of RawMaterialButton, RoundedRectangleBorder and CircleBorder)
+
+12/133
+Navigator (push, pop)
+Navigator.push(context,
+ MaterialPageRoute(
+     builder: (context){
+        return screen2();
+}
+Navigator.pop(context);
+}
+
+Routes (defined in MaterialApp Widget, can use one of two options as launcher screen at Material App Level 1.initialRoute or 2.home)
+initialRoute:('/'),
+routes: {
+    '/':(context)=> Screen0(),
+    '/screen1':(context)=> Screen1(),
+    '/screen2':(context)=> Screen2(),
+}
+to navigate with routes use
+Navigator.pushNamed(context, "/screen1");
+
+12/134
+Maps (as HashMap, Map<keyType,valueType>)
