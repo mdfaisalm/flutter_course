@@ -310,3 +310,15 @@ Navigator.pushNamed(context, "/screen1");
 
 12/134
 Maps (as HashMap, Map<keyType,valueType>)
+
+13/140
+Location flutter package
+Permissions
+
+13/141
+Duration n Sleep
+Future.delayed(time, task)
+Sleep is synced as it holds whole code but future just scheduler without delaying next lines of code
+Async and await
+Future as return type
+Future is promise of something that is not ready yet just like a receipt of coffee will be offered later as ready
