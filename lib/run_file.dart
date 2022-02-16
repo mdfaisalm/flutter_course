@@ -1,9 +1,10 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_course/BMI/HeightInputWidget.dart';
 import 'package:flutter_course/story_bank.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-//TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
+import 'BMI/BGContainer.dart';
+import 'BMI/GenderContainer.dart';
 
 void main() => runApp(Destini());
 
@@ -16,7 +17,6 @@ class Destini extends StatelessWidget {
   }
 }
 
-//TODO: Step 9 - Create a new storyBrain object from the StoryBrain class.
 StoryBrain storyBrain = StoryBrain();
 
 class StoryPage extends StatefulWidget {
@@ -26,29 +26,40 @@ class StoryPage extends StatefulWidget {
 class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
+    HeightInputWidget heightInputWidget = HeightInputWidget();
     return Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xff1D2136),
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
                 child: Row(
                   children: [
                     Expanded(
-                        child: Container(
-                      color: Colors.blue,
-                      // child: Text("ABC"),
-                    )),
+                      child: BGContainer(
+                        bgColor: Color(0xff323244),
+                        child: GenderContainer(
+                            iconData: FontAwesomeIcons.mars, text: "Male"),
+                        onClick: () {},
+                      ),
+                    ),
                     Expanded(
-                        child: Container(
-                      color: Colors.red,
-                    ))
+                      child: BGContainer(
+                        bgColor: Color(0xff323244),
+                        child: GenderContainer(
+                            iconData: FontAwesomeIcons.mars, text: "FeMale"),
+                        onClick: () {},
+                      ),
+                    ),
                   ],
                 ),
               ),
               Expanded(
-                child: Container(
-                  color: Colors.purple,
+                child: BGContainer(
+                  bgColor: Color(0xff323244),
+                  onClick: () {},
+                  child: HeightInputWidget(),
                 ),
               ),
               Expanded(
@@ -70,7 +81,3 @@ class _StoryPageState extends State<StoryPage> {
         ));
   }
 }
-
-//TODO: Step 24 - Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
-
-//TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
