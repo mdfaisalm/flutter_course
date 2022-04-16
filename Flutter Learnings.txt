@@ -174,8 +174,7 @@ CopyWith (to override specific part of theme)
 Theme Widget (Wrap Widgets with Theme Widget for deeper level individual customization)
 
 12/123
-Box Decoration (use color inside box decoration instead of color as major property of container,
-otherwise will crash due to ambiguous color property)
+Box Decoration (use color inside box decoration instead of color as major property of container,otherwise will crash due to ambiguous color property)
 DRY - Don't Repeat Yourself
 Extract Widget (Widget to a Class, Flutter Outline)
 Keys (https://www.youtube.com/watch?v=kn0EOS-ZiIc)
@@ -206,7 +205,7 @@ this.color=color;
 }
 }
 
-//Without Enum
+//With Enum
 void main(){
 MyCarColor myCarColor = MyCarColor();
 myCarColor.setCarColor(RED);
@@ -320,5 +319,32 @@ Duration n Sleep
 Future.delayed(time, task)
 Sleep is synced as it holds whole code but future just scheduler without delaying next lines of code
 Async and await
+Await can be applied on method returned value if method have Future as return type
 Future as return type
 Future is promise of something that is not ready yet just like a receipt of coffee will be offered later as ready
+
+13/142
+Stateless Widget lifecycle consist of build method
+Stateful Widget lifecycle consist of (initState() to init,build() to draw, deactivate() to destroy)
+
+13/143
+to handle null you can use ?? null Aware Operator
+variable??default
+margin??30 means if margin is null use 30 else use margin variable value
+Throw Exception with "throw" keyword
+
+13/146
+http request with apis
+add as keyword after import "package" to use as alias like import "flutter/abc.dart" as abc
+
+13/149
+flutter_spinkit package for loadings
+
+13/150
+inside a stateful widget class,to link main class with state class, use "widget" object
+
+13/153
+TextField Widget for text input field (TextStyle widget as style, InputDecoration(icon,hint,border with OutlineInputBorder widget) as decoration, input for valueChanges)
+
+13/154
+Pass data backward with pop method and value will be get on point from where this Screen was pushed
