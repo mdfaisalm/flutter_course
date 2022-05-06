@@ -6,8 +6,8 @@ import 'package:flutter_course/BMI/calculateBMI.dart';
 import 'package:flutter_course/story_bank.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'BMI/BGContainer.dart';
-import 'BMI/GenderContainer.dart';
+import 'BGContainer.dart';
+import 'GenderContainer.dart';
 
 void main() => runApp(BMICalculator());
 
@@ -30,7 +30,7 @@ enum Gender { MALE, FEMALE }
 
 class _StoryPageState extends State<StoryPage> {
   int _height = 120;
-  int _weight = 60;
+  int _weight = 40;
   int _age = 10;
   Color normalColor = Color(0xFF1D1E33);
   Color selectedColor = Color(0xFF111328);

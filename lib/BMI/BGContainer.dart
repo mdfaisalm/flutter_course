@@ -11,10 +11,10 @@ class BGContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onClick(),
+      onTap: () => onClick(),
       child: Container(
-        padding: EdgeInsets.all(20.0),
-        margin: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(10.0),
+        margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             color: bgColor,
             borderRadius: BorderRadiusDirectional.all(Radius.circular(10))),

@@ -293,7 +293,7 @@ Navigator.push(context,
  MaterialPageRoute(
      builder: (context){
         return screen2();
-}
+}));
 Navigator.pop(context);
 }
 
@@ -309,6 +309,9 @@ Navigator.pushNamed(context, "/screen1");
 
 12/134
 Maps (as HashMap, Map<keyType,valueType>)
+
+12/Extras
+FittedBox to scale content according to fit type
 
 13/140
 Location flutter package
