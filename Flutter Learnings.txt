@@ -505,3 +505,17 @@ use
 Text(Provider.of<Data>(context).data);//listen true/false param can set with context to listen or not to changes means just use initial value always
 notify
 Provider.of<Data>(context).changeString(newValue);
+
+16/206
+Consumer Widget (belongs to Provider package, use to remove repetition of code for access of ChangeNotifier class)
+Consumer<Data>(
+builder: (context,data,child){
+return anyWidget(
+data.blabla instead of Provider.of<Data>(context).blabla
+so as data of ChangeNotifier class change data param of this class will be updated
+)
+}
+)
+
+16/207
+unmodifiedListView
