@@ -351,3 +351,157 @@ TextField Widget for text input field (TextStyle widget as style, InputDecoratio
 
 13/154
 Pass data backward with pop method and value will be get on point from where this Screen was pushed
+
+14/158
+DropdownButton (value as selected value, items are list of dropdown items)
+DropdownMenuItem (as an item DropdownButton,has a widget as child and value is data sent to value param of DropdownButton to handle on selection changes)
+
+List<DropdownMenuItem<String>> myItems=[];
+myItems.add(DropdownMenuItem(child: Text("a"),value:"valueWhenThisItemselected"));
+myItems.add(DropdownMenuItem(child: Text("b"),value:"valueWhenThisItemselected"));
+myItems.add(DropdownMenuItem(child: Text("c"),value:"valueWhenThisItemselected"));
+String selectedItemValue="a";
+DropdownButton<String>(value: selectedItemValue, items: myItems, onChanged: (value) {
+selectedItemValue=value;
+})
+
+
+14/159
+standard for loop
+List[String] names=["a","b","c"];
+for (int i=0;i<names.length;i++){
+print(names[i]);
+}
+for in loop
+for (String name in names){
+print(name);
+}
+
+14/161
+Cupertino Widgets for IOS (CupertinoPicker (onSelectedItemChanged: (selectedIndex){} called as item selection changed, children: are list of widgets and itemExtent: for height))
+
+List<Text> myItems=[];
+myItems.add(Text("a"));
+myItems.add(Text("b"));
+myItems.add(Text("c"));
+String selectedItemValue="a";
+CupertinoPicker(itemExtent:30,children:myItems, onSelectedItemChanged:(selectedIndex){
+print(selectedIndex);
+}
+
+14/162
+check platform with platform class of dart.io package (platform.isAndroid, platform.isIOS)
+show keyword with import to get part of library instead of full library/package (import "dart.io" show platform)
+hide keyword with import to hide part of library (import "dart.io" hide platform)
+
+14/163
+Card (elevation, RoundedRectangleBorder)
+
+15/173
+Hero Widget (Hero Animations, shared element transition)
+
+15/174
+Custom Animation (AnimationController(duration,vsync(context)), ticker,value) (Controller.value, controller.forward,
+controller.reverse, controller.addListener to listen value changes,  controller.addStatusListener to listen state changes like completed/forward/reverse,
+controller should be dismissed after as it will continue to animate after screen dismissed so use controller.dispose on dispose method of widget,
+by default controller proceed numerically from 0 to 1)
+Color.black.witchOpacity (for alpha)
+
+Controller controller=AnimationController(duration: Duration(seconds:1), vsync:this);
+controller.forward();//
+controller.addListener((){
+//setting state to update views where controller values used like below opacity
+setState((){
+});
+}
+backgroundColor: Colors.red.withOpacity(controller.value);
+}
+
+CurvedAnimation(parent: AnimationController, curve: type of curve)(for curvedAnimation, controller should be in-between of 0 and 1)
+TweenAnimations (move from init and final values of different types like ColorTween/SizeTween/BorderRadiusTween/BorderTween,
+ColorTween(begin: Colors.red, end:Colors.white).animate(controller))
+
+15/175
+'with' keyword to extends more classes as implements in java
+(class to be inherited using 'with' keyword, should be a mixin (mixin ClassName instead of class ClassName),SingleTickerProviderStateMixin for Animation Ticker)
+
+15/183
+obscureText: true for TextField widget to set password input type
+keyboardType: for different type of input
+
+15/185
+ModalProgressHUD package for loading/wait as ProgressBar spinning in Android sdk during async requests like server request
+
+15/189
+StreamBuilder Widget(setState called as new data come to stream)
+StreamBuilder(stream: fireStore.collection('messages').snapshot() (this method of fireStore returns a stream)
+, builder:(rebuilds the children as Stream collection updates),(context,snapshot){
+
+}
+} )
+}
+
+15/190
+Material Widget (color, shadowColor,elevation etc, borderRadius, wrap widgets with Material Widget for customizing backgrounds)
+ListView Widget(children: widgetsList, reverse:true/false)
+MessageTextController with TextField to use methods like messageTextController.clear();
+
+15/191
+Flexible Widget (Wrap widget with Flexible Widget which manage size of widget if already assigned size of widget is going out of bounds)
+
+15/192
+FireStore Rules (all, none, only-authenticated)
+FireStore Rules tested with Simulator in FireStore Rules Screen
+
+16/197
+Checkbox
+
+16/198
+BottomSheet (persistent (stay on screen while user interact with other section), modal (prevent user from other part interaction,showModalBottomSheet))
+open Keyboard on start of widget set autofocus:true to TextField
+
+16/200
+local state (state of a widget with constant value like Text("abc") or set value with a variable but variable is defined inside widget so it always reset on reDraw of widget)
+global state (use variable for widget value and store it outside widget)
+
+16/202
+ListView can take direct list of child or if there is lot of child then should use ListViewBuilder(works like recyclerview to recycle items)
+IndexedWidgetBuilder (context, index) used with ListViewBuilder
+ListView.Builder(itemBuilder:(context,index){},itemCount:10)
+
+16/204
+MVC (Model, View, Controller) (View capture user requirements and send to controller, controller communicate to model for data and then update view accordingly)
+Imperative vs Reactive
+
+16/205
+Provider Package for state management
+define
+Provider<String>(
+builder: (context){
+return "string";
+}
+child: any widget
+)
+use
+Text(Provider.of<String>(context));//listen true/false param can set with context to listen or not to changes means just use initial value always
+
+ChangeNotifier with Provider(notifyListeners to publish changes,ChangeNotifierProvider as parent widget)
+define
+ChangeNotifierProvider<Data>(
+builder: (context){
+return Data();
+}
+child: any widget
+)
+notifier class
+class Data extends ChangeNotifier{
+String data="some data";
+void changeString(newValue){
+data=newValue;
+notifyListeners();
+}
+}
+use
+Text(Provider.of<Data>(context).data);//listen true/false param can set with context to listen or not to changes means just use initial value always
+notify
+Provider.of<Data>(context).changeString(newValue);
