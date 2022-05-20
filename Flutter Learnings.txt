@@ -519,3 +519,18 @@ so as data of ChangeNotifier class change data param of this class will be updat
 
 16/207
 unmodifiedListView
+
+18/216
+Tips
+For multi-language coding just focus on logic, syntex will be switched automatically in short and also auto-complete and documentation is there
+Be the best in skill and be updated, don't feel about competitions, more skillful and updated will be more valuable
+Portfolio helps to show world, don't tell about your skills but show your skills, and for portfolio add quality work you done and clone top apps in free time to add to portfolio
+Learn side skills like git, firebase, jetpack etc...
+
+To learn new skills, learn basics and then learn and apply and learn and apply and learn and apply in cycle according to your current goal (app/software)
+Means not a need to master fully (99.99) and then start applying to projects,
+just learn basics and then learn along with projects as required in current project
+Don't try to store information and syntax as all is available on google, so just remember the logics and understand code instead of remembering code
+Success is not overnight
+Opportunities comes to those who are prepared for others just another signal to wakeup, so first get prepared, opportunities will come on there time
+First reputation and then money will come automatically (on/off internet)
